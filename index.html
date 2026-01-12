@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Casselman | Economics Correspondent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Inter', sans-serif; color: #1a1a1a; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white border-b">
+        <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
+            <img src="https://static01.nyt.com/images/2018/10/01/multimedia/author-ben-casselman/author-ben-casselman-thumbLarge.png" 
+                 alt="Ben Casselman" 
+                 class="w-48 h-48 rounded-full border-4 border-gray-100 shadow-lg object-cover">
+            <div>
+                <h1 class="text-4xl md:text-5xl mb-2">Ben Casselman</h1>
+                <p class="text-xl text-gray-600 font-medium">Chief Economics Correspondent, The New York Times</p>
+                <div class="mt-4 flex gap-4 text-blue-600 font-semibold">
+                    <a href="mailto:ben.casselman@nytimes.com" class="hover:underline">Email</a>
+                    <a href="https://twitter.com/bencasselman" class="hover:underline">Twitter</a>
+                    <a href="https://linkedin.com/in/bencasselman" class="hover:underline">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <section class="mb-16">
+            <h2 class="text-3xl mb-6">About</h2>
+            <p class="text-lg leading-relaxed text-gray-700 max-w-3xl">
+                I cover the economy, labor markets, and data-driven stories for <strong>The New York Times</strong>. 
+                My reporting focuses on the numbers that shape our lives—and the human stories behind those numbers. 
+                Previously, I was the chief economics writer for FiveThirtyEight and a reporter for The Wall Street Journal.
+            </p>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl mb-8">Significant Work</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Investigation</span>
+                    <h3 class="text-xl mt-2 mb-3">Deepwater Horizon Coverage</h3>
+                    <p class="text-gray-600 mb-4">Pulitzer Prize Finalist & Loeb Award Winner for reporting on the Gulf oil spill.</p>
+                    <a href="#" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic">Read More →</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Data Analysis</span>
+                    <h3 class="text-xl mt-2 mb-3">Gun Deaths in America</h3>
+                    <p class="text-gray-600 mb-4">A comprehensive data investigation into the reality of firearm violence.</p>
+                    <a href="#" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 bg-gray-900 text-white p-8 rounded-2xl">
+            <h2 class="text-3xl mb-8">Media Appearances</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="aspect-video bg-gray-800 rounded flex items-center justify-center border border-gray-700">
+                    <span class="text-gray-500">[Paste YouTube Embed Code Here]</span>
+                </div>
+                <div>
+                    <h3 class="text-xl mb-4 text-blue-400 font-bold tracking-tight">Recent Podcasts</h3>
+                    <ul class="space-y-4">
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="#" class="hover:text-blue-300">The Daily: Why the Labor Market is Shifting</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="#" class="hover:text-blue-300">Planet Money: The Inflation Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl mb-6">Recent Reporting</h2>
+            <div id="rss-feed" class="space-y-4 text-gray-700 italic">
+                Loading latest articles from the Times...
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t py-12 text-center text-gray-500 text-sm">
+        &copy; 2024 Ben Casselman. Built with minimal maintenance in mind.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rss-parser/3.12.0/rss-parser.min.js"></script>
+    <script>
+        const RSS_URL = `https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml`;
+        const parser = new RSSParser();
+        parser.parseURL('https://cors-anywhere.herokuapp.com/' + RSS_URL, function(err, feed) {
+            if (err) {
+                document.getElementById('rss-feed').innerHTML = "Unable to load feed. See <a href='https://www.nytimes.com/by/ben-casselman'>NYT Profile</a>.";
+                return;
+            }
+            let html = '<div class="grid gap-4">';
+            const myStories = feed.items.slice(0, 5);
+            myStories.forEach(item => {
+                html += `<div class="p-4 border-l-4 border-gray-200 bg-white hover:border-blue-500 transition">
+                            <a href="${item.link}" target="_blank" class="text-lg font-semibold text-black block">${item.title}</a>
+                            <span class="text-sm text-gray-500">${new Date(item.pubDate).toLocaleDateString()}</span>
+                         </div>`;
+            });
+            html += '</div>';
+            document.getElementById('rss-feed').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
