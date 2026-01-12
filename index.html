@@ -15,15 +15,16 @@
 
     <header class="bg-white border-b">
         <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
-            <img src="https://static01.nyt.com/images/2018/10/01/multimedia/author-ben-casselman/author-ben-casselman-thumbLarge.png" 
-                 alt="Ben Casselman" 
+            <img src="https://github.com/BenCasselman/personal-page/blob/c92bd9d34b3de4fae62b4a95f79d4f210576ccbd/Casselman2.jpg" 
+                 alt="Ben Casselman/Photo credit: Earl Wilson, NYT" 
                  class="w-48 h-48 rounded-full border-4 border-gray-100 shadow-lg object-cover">
             <div>
                 <h1 class="text-4xl md:text-5xl mb-2">Ben Casselman</h1>
                 <p class="text-xl text-gray-600 font-medium">Chief Economics Correspondent, The New York Times</p>
                 <div class="mt-4 flex gap-4 text-blue-600 font-semibold">
                     <a href="mailto:ben.casselman@nytimes.com" class="hover:underline">Email</a>
-                    <a href="https://twitter.com/bencasselman" class="hover:underline">Twitter</a>
+                    <a href="https://signal.me/#eu/4LIg1kAOm3Rwe7AYTDWOsqcAXJj-d9vPyoNFsn-ncFusKf2q57ZLIJZP3mC78ELJ" class="hover:underling">Signal</a>
+                    <a href="https://www.nytimes.com/by/ben-casselman" class="hover:underline">NYT</a>
                     <a href="https://linkedin.com/in/bencasselman" class="hover:underline">LinkedIn</a>
                 </div>
             </div>
@@ -35,44 +36,124 @@
         <section class="mb-16">
             <h2 class="text-3xl mb-6">About</h2>
             <p class="text-lg leading-relaxed text-gray-700 max-w-3xl">
-                I cover the economy, labor markets, and data-driven stories for <strong>The New York Times</strong>. 
-                My reporting focuses on the numbers that shape our lives—and the human stories behind those numbers. 
-                Previously, I was the chief economics writer for FiveThirtyEight and a reporter for The Wall Street Journal.
+                I am a reporter covering the U.S. economy and economic policy, with a particular specialty in stories using and explaining data.
+                I currently serve as chief economic correspondent for <strong>The New York Times</strong>. Previously, I was chief economics writer and senior editor for FiveThirtyEight and a reporter for The Wall Street Journal.
+                I also teach economics reporting at the <strong>Craig Newmark Graduate School of Journalism</strong> at CUNY.
             </p>
         </section>
 
-        <section class="mb-16">
-            <h2 class="text-3xl mb-8">Significant Work</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Investigation</span>
-                    <h3 class="text-xl mt-2 mb-3">Deepwater Horizon Coverage</h3>
-                    <p class="text-gray-600 mb-4">Pulitzer Prize Finalist & Loeb Award Winner for reporting on the Gulf oil spill.</p>
-                    <a href="#" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic">Read More →</a>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Data Analysis</span>
-                    <h3 class="text-xl mt-2 mb-3">Gun Deaths in America</h3>
-                    <p class="text-gray-600 mb-4">A comprehensive data investigation into the reality of firearm violence.</p>
-                    <a href="#" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic">Read More →</a>
-                </div>
+<section class="mb-16">
+    <h2 class="text-3xl mb-8">Significant Work</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+        
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
+            <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Investigation</span>
+            <h3 class="text-xl mt-2 mb-3">Deepwater Horizon Coverage</h3>
+            <p class="text-gray-600 mb-4">Pulitzer Prize Finalist & Loeb Award Winner for reporting on the Gulf oil spill.</p>
+            
+            <div id="deepwater-list" class="hidden mt-4 pt-4 border-t border-gray-100 space-y-3">
+                <a href="https://www.wsj.com/articles/SB10001424052748704307804575234471807539054" class="block text-sm text-gray-700 hover:text-blue-600">→ Rig Owner Had Rising Tally of Accicents (WSJ)</a>
+                <a href="https://www.wsj.com/articles/SB10001424052748703960004575427142505940502" class="block text-sm text-gray-700 hover:text-blue-600">→ On Doomed Rig's Last Day, a Divisive Change of Plans (WSJ)</a>
+                <a href="https://www.wsj.com/articles/SB10001424052748704026204575266560930780190" class="block text-sm text-gray-700 hover:text-blue-600">→ BP Decisions Set Stage for Disaster (WSJ)</a>
+                <a href="https://www.wsj.com/articles/SB10001424052748703315404575250591376735052" class="block text-sm text-gray-700 hover:text-blue-600">→ Disaster Plans Lacking at Deep Rigs (WSJ)</a>
+                <a href="https://www.wsj.com/articles/SB10001424052748703989004575652714091006550" class="block text-sm text-gray-700 hover:text-blue-600">→ Far Offshore, a Rash of Close Calls (WSJ)</a>
             </div>
-        </section>
+
+            <button onclick="toggleSection('deepwater-list', this)" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic transition">
+                Read More +
+            </button>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
+            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">The Pandemic</span>
+            <h3 class="text-xl mt-2 mb-3">COVID and Its Aftermath</h3>
+            <p class="text-gray-600 mb-4">How the coronavirus pandemic reshaped the American economy.</p>
+            
+            <div id="covid-list" class="hidden mt-4 pt-4 border-t border-gray-100 space-y-3">
+                <a href="https://www.nytimes.com/2020/05/28/business/economy/coronavirus-stimulus-unemployment.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Millions Relying on Pandemic Aid Can See Its End, and They’re Scared</a>
+                <a href="https://www.nytimes.com/2020/08/08/business/economy/lost-unemployment-benefits.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Without $600 Weekly Benefit, Unemployed Face Bleak Choices</a>
+                <a href="https://www.nytimes.com/2020/09/16/business/economy/unemployment-claims-numbers.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Why Unemployment Claims May Be Overcounted by Millions</a>
+                <a href="https://www.nytimes.com/2021/05/18/magazine/stimulus-us-economy.html" class="block text-sm text-gray-700 hover:text-blue-600">→ America Is on a Road to a Better Economy. But Better for Whom?</a>
+                <a href="https://www.nytimes.com/2022/08/06/business/economy/economy-jobs-inflation.html" class="block text-sm text-gray-700 hover:text-blue-600">→ How This Economic Moment Rewrites the Rules</a>
+                <a href="https://www.nytimes.com/2023/07/06/business/economy/jobs-great-resignation.html" class="block text-sm text-gray-700 hover:text-blue-600">→ The ‘Great Resignation’ Is Over. Can Workers’ Power Endure?</a>
+            </div>
+
+            <button onclick="toggleSection('covid-list', this)" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic transition">
+                Read More +
+            </button>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
+            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Trump</span>
+            <h3 class="text-xl mt-2 mb-3">The Trump Economy</h3>
+            <p class="text-gray-600 mb-4">What the second Trump administration has meant for workers and the economy.</p>
+            
+            <div id="trump-list" class="hidden mt-4 pt-4 border-t border-gray-100 space-y-3">
+                <a href="https://www.nytimes.com/2025/01/10/business/economy/economists-politics-trump.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Economists Are in the Wilderness. Can They Find a Way Back to Influence?</a>
+                <a href="https://www.nytimes.com/2025/03/31/business/economy/trump-research-cutbacks-economy.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Trump’s Science Policies Pose Long-Term Risk, Economists Warn</a>
+                <a href="https://www.nytimes.com/2025/04/11/business/economy/tariffs-trump-china-shock.html" class="block text-sm text-gray-700 hover:text-blue-600">→ The ‘China Shock’ Offers a Lesson. It Isn’t the One Trump Has Learned.</a>            
+    <a href="https://www.nytimes.com/2025/08/03/business/trump-bls-firing-economic-reports.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Trump Fired America’s Economic Data Collector. History Shows the Perils.</a>
+
+
+    <a href="https://www.nytimes.com/2025/08/26/us/politics/trump-fed-lisa-cook.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Seeking to Control the Fed, Trump Risks Upending a Pillar of the Global Economy</a>
+    <a href="https://www.nytimes.com/2025/10/19/business/economic-divide-spending-inflation-jobs.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Wealthy Americans Are Spending. People With Less Are Struggling.</a>
+
+</div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
+            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Data Analysis</span>
+            <h3 class="text-xl mt-2 mb-3">Data visualizations and interactive</h3>
+            <p class="text-gray-600 mb-4">How the coronavirus pandemic reshaped the American economy.</p>
+            
+            <div id="data-list" class="hidden mt-4 pt-4 border-t border-gray-100 space-y-3">
+                <a href="https://www.nytimes.com/interactive/2017/11/28/upshot/what-the-tax-bill-would-look-like-for-25000-middle-class-families.html" class="block text-sm text-gray-700 hover:text-blue-600">→ What the Tax Bill Would Look Like or 25,000 Middle-Class Families</a>
+                <a href="https://www.nytimes.com/interactive/2021/07/27/business/economy/covid-parenting-work-time.html" class="block text-sm text-gray-700 hover:text-blue-600">→ The Pandemic Changed How We Spent Our Time</a>
+                <a href="https://www.nytimes.com/interactive/2022/05/08/business/economy/inflation-calculator.html" class="block text-sm text-gray-700 hover:text-blue-600">→ What’s Your Rate of Inflation?</a>
+            </div>
+
+            <button onclick="toggleSection('data-list', this)" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic transition">
+                Read More +
+            </button>
+        </div>
+
+
+
+    </div>
+</section>
+
+<script>
+    function toggleSection(id, btn) {
+        const section = document.getElementById(id);
+        if (section.classList.contains('hidden')) {
+            section.classList.remove('hidden');
+            btn.innerText = 'Show Less -';
+        } else {
+            section.classList.add('hidden');
+            btn.innerText = 'Read More +';
+        }
+    }
+</script>
 
         <section class="mb-16 bg-gray-900 text-white p-8 rounded-2xl">
             <h2 class="text-3xl mb-8">Media Appearances</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="aspect-video bg-gray-800 rounded flex items-center justify-center border border-gray-700">
-                    <span class="text-gray-500">[Paste YouTube Embed Code Here]</span>
+                    <span class="text-gray-500"><iframe width="560" height="315" src="https://www.youtube.com/embed/XwOzaoWNzw4?si=gd6zR_Nuk5GXVCSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
                 </div>
                 <div>
-                    <h3 class="text-xl mb-4 text-blue-400 font-bold tracking-tight">Recent Podcasts</h3>
+                    <h3 class="text-xl mb-4 text-blue-400 font-bold tracking-tight">Podcasts</h3>
                     <ul class="space-y-4">
                         <li class="border-b border-gray-700 pb-2">
-                            <a href="#" class="hover:text-blue-300">The Daily: Why the Labor Market is Shifting</a>
+                            <a href="https://www.nytimes.com/2024/08/29/podcasts/the-daily/tipping-trump-harris.html" class="hover:text-blue-300">The Daily: Why Tipping Is Everywhere</a>
                         </li>
                         <li class="border-b border-gray-700 pb-2">
-                            <a href="#" class="hover:text-blue-300">Planet Money: The Inflation Question</a>
+                            <a href="https://www.nytimes.com/2025/05/05/podcasts/the-daily/economy-finance-questions-trump-tariff.html" class="hover:text-blue-300">The Daily: You have questions about the economy. We have answers.</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.npr.org/transcripts/1256575142" class="hover:text-blue-300">Planet Money: Would you trust an economist with your economy?</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.npr.org/2019/08/28/755191639/episode-936-the-modal-american" class="hover:text-blue-300">Planet Money: The modal American</a>
                         </li>
                     </ul>
                 </div>
@@ -89,7 +170,7 @@
     </main>
 
     <footer class="bg-white border-t py-12 text-center text-gray-500 text-sm">
-        &copy; 2024 Ben Casselman. Built with minimal maintenance in mind.
+        &copy; 2026 Ben Casselman. 
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rss-parser/3.12.0/rss-parser.min.js"></script>
