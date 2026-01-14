@@ -15,7 +15,7 @@
 
     <header class="bg-white border-b">
         <div class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
-            <img src="https://github.com/BenCasselman/personal-page/blob/c92bd9d34b3de4fae62b4a95f79d4f210576ccbd/Casselman2.jpg" 
+            <img src="Casselman2.jpg" 
                  alt="Ben Casselman/Photo credit: Earl Wilson, NYT" 
                  class="w-48 h-48 rounded-full border-4 border-gray-100 shadow-lg object-cover">
             <div>
@@ -41,6 +41,7 @@
                 I also teach economics reporting at the <strong>Craig Newmark Graduate School of Journalism</strong> at CUNY.
             </p>
         </section>
+        
 
 <section class="mb-16">
     <h2 class="text-3xl mb-8">Significant Work</h2>
@@ -65,7 +66,7 @@
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
-            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">The Pandemic</span>
+            <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">The Pandemic</span>
             <h3 class="text-xl mt-2 mb-3">COVID and Its Aftermath</h3>
             <p class="text-gray-600 mb-4">How the coronavirus pandemic reshaped the American economy.</p>
             
@@ -84,7 +85,7 @@
         </div>
 
         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
-            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Trump</span>
+            <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Trump</span>
             <h3 class="text-xl mt-2 mb-3">The Trump Economy</h3>
             <p class="text-gray-600 mb-4">What the second Trump administration has meant for workers and the economy.</p>
             
@@ -93,15 +94,18 @@
                 <a href="https://www.nytimes.com/2025/03/31/business/economy/trump-research-cutbacks-economy.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Trump’s Science Policies Pose Long-Term Risk, Economists Warn</a>
                 <a href="https://www.nytimes.com/2025/04/11/business/economy/tariffs-trump-china-shock.html" class="block text-sm text-gray-700 hover:text-blue-600">→ The ‘China Shock’ Offers a Lesson. It Isn’t the One Trump Has Learned.</a>            
     <a href="https://www.nytimes.com/2025/08/03/business/trump-bls-firing-economic-reports.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Trump Fired America’s Economic Data Collector. History Shows the Perils.</a>
-
-
     <a href="https://www.nytimes.com/2025/08/26/us/politics/trump-fed-lisa-cook.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Seeking to Control the Fed, Trump Risks Upending a Pillar of the Global Economy</a>
     <a href="https://www.nytimes.com/2025/10/19/business/economic-divide-spending-inflation-jobs.html" class="block text-sm text-gray-700 hover:text-blue-600">→ Wealthy Americans Are Spending. People With Less Are Struggling.</a>
 
 </div>
 
+            <button onclick="toggleSection('trump-list', this)" class="text-black font-semibold border-b-2 border-gray-200 hover:border-black italic transition">
+                Read More +
+            </button>
+        </div>
+
         <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition h-fit">
-            <span class="text-sm font-bold text-red-600 uppercase tracking-widest">Data Analysis</span>
+            <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Data Analysis</span>
             <h3 class="text-xl mt-2 mb-3">Data visualizations and interactive</h3>
             <p class="text-gray-600 mb-4">How the coronavirus pandemic reshaped the American economy.</p>
             
@@ -136,10 +140,24 @@
 
         <section class="mb-16 bg-gray-900 text-white p-8 rounded-2xl">
             <h2 class="text-3xl mb-8">Media Appearances</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="aspect-video bg-gray-800 rounded flex items-center justify-center border border-gray-700">
-                    <span class="text-gray-500"><iframe width="560" height="315" src="https://www.youtube.com/embed/XwOzaoWNzw4?si=gd6zR_Nuk5GXVCSU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+        
+        <div class="relative group cursor-pointer rounded-lg overflow-hidden border border-gray-700 shadow-2xl">
+            <a href="https://www.nytimes.com/video/business/economy/100000010362356/how-trump-could-gain-control-of-the-fed.html" target="_blank">
+              <div class="aspect-[4/5] bg-gray-800">
+                <img src="video-screencap.png" 
+                     alt="How Trump Could Gain Control of the Fed" 
+                     class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-300">
+                
+               
+                
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 p-4">
+                    <p class="text-sm font-bold">WATCH: How Trump Could Gain Control of the Fed</p>
+                    <p class="text-xs text-gray-300">New York Times Reporter Video</p>
                 </div>
+            </a>
+        </div>
+        </div>
                 <div>
                     <h3 class="text-xl mb-4 text-blue-400 font-bold tracking-tight">Podcasts</h3>
                     <ul class="space-y-4">
@@ -156,17 +174,42 @@
                             <a href="https://www.npr.org/2019/08/28/755191639/episode-936-the-modal-american" class="hover:text-blue-300">Planet Money: The modal American</a>
                         </li>
                     </ul>
-                </div>
+                
+                <p style="margin-bottom: 20px;"></p>
+                
+                 <div>
+                    <h3 class="text-xl mb-4 text-blue-400 font-bold tracking-tight">TV and Video</h3>
+                    <ul class="space-y-4">
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.youtube.com/watch?v=XwOzaoWNzw4" class="hover:text-blue-300">MSNBC on firing of BLS commissioner</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.cbsnews.com/video/fact-checking-trump-claims-on-bureau-of-labor-statistics-data/" class="hover:text-blue-300">CBS News on firing of BLS commissioner</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.nytimes.com/video/us/politics/100000010102777/how-trumps-shifting-tariffs-could-accelerate-a-recession.html" class="hover:text-blue-300">NYT video on tariffs and recession risk</a>
+                        </li>
+                        <li class="border-b border-gray-700 pb-2">
+                            <a href="https://www.youtube.com/watch?v=pnQRjUj7BNc">Yale Budget Lab panel on tariff modeling</a>
+                        </li>
+                        
+                      
+                        
+                    </ul>
+                
+                
+                
             </div>
         </section>
 
-        <section>
-            <h2 class="text-3xl mb-6">Recent Reporting</h2>
-            <div id="rss-feed" class="space-y-4 text-gray-700 italic">
-                Loading latest articles from the Times...
-            </div>
+             <section class="mb-16">
+            <h2 class="text-3xl mb-6">Contact me</h2>
+            <p class="text-lg leading-relaxed text-gray-700 max-w-3xl">
+                For story pitches, feedback about my work, speaking invitations or other general inquiries, the best way to reach me is by <a href="mailto:ben.casselman@nytimes.com" class="hover:underline">email</a>. I do my best to respond to all personal emails, but I don't always succeed. Please note that I do not accept speaking invitations from partisan or for-profit organizations.<br>
+                If you have a confidential news tip or are concened about privacy, you can reach me on the encrypted messaging app <a href="https://signal.me/#eu/4LIg1kAOm3Rwe7AYTDWOsqcAXJj-d9vPyoNFsn-ncFusKf2q57ZLIJZP3mC78ELJ" class="hover:underline">Signal</a>.
+            </p>
         </section>
-
+        
     </main>
 
     <footer class="bg-white border-t py-12 text-center text-gray-500 text-sm">
